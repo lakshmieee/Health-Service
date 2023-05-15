@@ -1,0 +1,17 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.frame{
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 50px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+h1{
+    text-align: center;
+    
+}

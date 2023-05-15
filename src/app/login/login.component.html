@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card">
+        <img class="card-img-top" src="../../assets/x-ray.jpg" alt="Card image" height="200px">
+        <div class="card-img-overlay"><h1 class="card-title">Login</h1></div>
+      </div> <br>
+     <form [formGroup]="loginForm" >
+      
+      <label for="">Email Id<b>*</b></label>
+      <input type="email" class="form-control" formControlName="email">
+      <p *ngIf="!loginForm.controls.email?.valid && loginForm.controls.email?.touched ">***Email required</p><br>
+      <label for="">Password<b>*</b></label>
+      <input type="password" class="form-control" formControlName="password">
+      <p *ngIf="!loginForm.controls.password?.valid && loginForm.controls.password?.touched ">***Minimum length of password is 8 characters</p><br>
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" (click)="login()">login</button>
+     </form>
+    </div>

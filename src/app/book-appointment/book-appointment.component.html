@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="card">
+        <img class="card-img-top" src="../../assets/book-apponitment.jpg" alt="Card image" height="700px">
+        <div class="card-img-overlay">
+            <div class="form">
+                <div class="row col-6 frame ">
+
+                    <form [formGroup]="bookAppointment">
+                        <h1>Book Appointment</h1>
+                        <div class="form-group">
+                            <label for="">Patient Name :</label>
+                            <input type="text" class="form-control" formControlName="patientName">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Patient DOB :</label>
+                            <input type="date" class="form-control" formControlName="patientDob">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Patient Medical issue :</label>
+                            <input type="text" class="form-control" formControlName="patientMedIssue">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Hospital Name :</label>
+                            <input type="text" class="form-control" formControlName="hospitalName">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Visit Date :</label>
+                            <input type="date" class="form-control" formControlName="visitDate">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Email :</label>
+                            <input type="email" class="form-control" formControlName="email">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="">Mobile Number :</label>
+                            <input type="number" class="form-control" formControlName="mobileNumber">
+                        </div><br>
+
+                        <button class="btn btn-primary" [disabled]="!bookAppointment.valid" (click)="showDetails()">Book Appointment</button>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
